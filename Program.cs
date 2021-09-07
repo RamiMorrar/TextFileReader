@@ -35,6 +35,7 @@ namespace ConsoleUI
                 newPerson.FirstName = entries[0];
                 newPerson.LastName = entries[1];
                 newPerson.Url = entries[2];
+
                 people.Add(newPerson);
             }
             Console.WriteLine("Read From Text File");
@@ -44,7 +45,9 @@ namespace ConsoleUI
             }
             // Saves name to text file
             people.Add(new Person { FirstName = "Greg", LastName = "GoodMan", Url = "www.test.com" });
+
             List<string> output = new List<string>();
+
             foreach (var person in people)
             {
                 output.Add($"{ person.FirstName },{ person.LastName },{person.Url }");
